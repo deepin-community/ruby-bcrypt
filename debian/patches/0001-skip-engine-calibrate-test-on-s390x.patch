@@ -1,0 +1,24 @@
+From: =?utf-8?q?C=C3=A9dric_Boutillier?= <boutil@debian.org>
+Date: Fri, 28 Aug 2020 11:33:51 +0200
+Subject: skip engine calibrate test on s390x
+
+the result is time dependent and may fail depending on the status of the
+machine
+Bug: https://github.com/codahale/bcrypt-ruby/issues/235
+---
+ spec/bcrypt/engine_spec.rb | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/spec/bcrypt/engine_spec.rb b/spec/bcrypt/engine_spec.rb
+index 90a681e..4748f6a 100644
+--- a/spec/bcrypt/engine_spec.rb
++++ b/spec/bcrypt/engine_spec.rb
+@@ -16,7 +16,7 @@ describe "The BCrypt engine" do
+     second = BCrypt::Engine.calibrate(400)
+     expect(second).to be > first
+   end
+-end
++end unless RbConfig::CONFIG["arch"]=~ /s390x/
+ 
+ describe "Generating BCrypt salts" do
+ 

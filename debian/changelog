@@ -1,0 +1,210 @@
+ruby-bcrypt (3.1.16-deepin1) unstable; urgency=medium
+
+  * Rebuild
+
+ -- Deepin Packages Builder <packages@deepin.org>  Fri, 11 Nov 2022 18:04:14 +0800
+
+ruby-bcrypt (3.1.16-1) unstable; urgency=medium
+
+  * New upstream version 3.1.16
+  * Standards-Version bumped to 4.5.1 (no changes needed)
+
+ -- Cédric Boutillier <boutil@debian.org>  Sun, 27 Dec 2020 14:27:22 +0100
+
+ruby-bcrypt (3.1.15-2) unstable; urgency=medium
+
+  * skip engine calibrate test on s390x
+
+ -- Cédric Boutillier <boutil@debian.org>  Fri, 28 Aug 2020 11:42:12 +0200
+
+ruby-bcrypt (3.1.15-1) unstable; urgency=medium
+
+  [ Pirate Praveen ]
+  * Bump minimum version of gem2deb to 1~
+
+  [ Cédric Boutillier ]
+  * New upstream version 3.1.15
+  * update packaging, according to dh-make-ruby
+    - v4 watch file
+    - gem style install
+  * Use the rake version of debian/ruby-tests
+  * Drop patch to build armel and armhf, applied upstream
+
+ -- Cédric Boutillier <boutil@debian.org>  Fri, 31 Jul 2020 11:37:52 +0200
+
+ruby-bcrypt (3.1.13-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Utkarsh Gupta ]
+  * Add salsa-ci.yml
+  * Update d/ch
+
+  [ Lucas Kanashiro ]
+  * Add upstream patch to fix build on armhf and armel against ruby2.7
+
+ -- Lucas Kanashiro <lucas.kanashiro@canonical.com>  Wed, 19 Feb 2020 08:58:19 -0300
+
+ruby-bcrypt (3.1.13-1) unstable; urgency=medium
+
+  * New upstream version 3.1.13
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Bump Standards-Version to 4.5.0 (no changes needed)
+  * Rubygems gem install style
+
+ -- Cédric Boutillier <boutil@debian.org>  Tue, 28 Jan 2020 15:22:01 +0100
+
+ruby-bcrypt (3.1.12-1) unstable; urgency=medium
+
+  * Use salsa.debian.org in Vcs-* fields
+  * Bump Standards-Version to 4.2.1 (no changes needed)
+  * Bump debhelper compatibility level to 11
+  * Move debian/watch to gemwatch.debian.net
+  * New upstream version 3.1.12
+  * Use https in copyright format url
+
+ -- Cédric Boutillier <boutil@debian.org>  Sun, 30 Sep 2018 09:03:12 +0200
+
+ruby-bcrypt (3.1.11-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Cédric Boutillier ]
+  * Remove version in the gem2deb build-dependency
+  * Use https:// in Vcs-* fields
+  * Bump Standards-Version to 3.9.7 (no changes needed)
+  * Run wrap-and-sort on packaging files
+
+  [ Christian Hofstaedtler ]
+  * New upstream version.
+
+ -- Christian Hofstaedtler <zeha@debian.org>  Thu, 05 May 2016 22:49:08 +0000
+
+ruby-bcrypt (3.1.10-1) unstable; urgency=medium
+
+  * Upload to unstable
+  * This rebuild adds support for Ruby2.2
+
+ -- Cédric Boutillier <boutil@debian.org>  Sun, 21 Jun 2015 07:57:49 +0200
+
+ruby-bcrypt (3.1.10-1~exp1) experimental; urgency=medium
+
+  * Imported Upstream version 3.1.10
+  * Bump Standards-Version to 3.9.6 (no changes needed)
+  * Build-depends on ruby-rspec >= 3
+  * Update homepage to https://github.com/codahale/bcrypt-ruby
+  * Change upstream name to bcrypt
+  * Set Testsuite to autopkgtest-pkg-ruby
+  * Change the order of Files paragraphs in debian/copyright, from general to
+    specific, fix typo in a filename
+
+ -- Cédric Boutillier <boutil@debian.org>  Sun, 03 May 2015 00:28:44 +0200
+
+ruby-bcrypt (3.1.7-2) unstable; urgency=medium
+
+  * Team upload.
+  * Bump gem2deb build dep to 0.7.4~
+    - drop ruby1.9.1 and add ruby 2.0
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 04 Apr 2014 16:21:26 +0530
+
+ruby-bcrypt (3.1.7-1) unstable; urgency=medium
+
+  * Imported Upstream version 3.1.7
+  * debian/watch: reflect the fact that the gem is now called bcrypt, and not
+    bcrypt-ruby.
+
+ -- Cédric Boutillier <boutil@debian.org>  Tue, 04 Mar 2014 17:58:27 +0100
+
+ruby-bcrypt (3.1.2-2) unstable; urgency=low
+
+  * Team upload
+  * remove unnecessary dependency on ruby-rspec
+
+ -- Antonio Terceiro <terceiro@debian.org>  Sun, 08 Dec 2013 19:18:26 -0300
+
+ruby-bcrypt (3.1.2-1) unstable; urgency=low
+
+  * Imported Upstream version 3.1.2
+  * Bump standards-Version to 3.9.5 (no changes needed)
+  * Build with gem2deb >= 0.5 to add support for Ruby 2.0 and remove support
+    for Ruby 1.8
+
+ -- Cédric Boutillier <boutil@debian.org>  Thu, 28 Nov 2013 14:07:50 +0100
+
+ruby-bcrypt (3.1.1-1) unstable; urgency=low
+
+  * Imported Upstream version 3.1.1
+
+ -- Cédric Boutillier <boutil@debian.org>  Thu, 01 Aug 2013 14:08:42 +0200
+
+ruby-bcrypt (3.0.1-3) unstable; urgency=low
+
+  [ Vasudev Kamath ]
+  * Drop myself from uploaders field.
+  * Bump Standards-Version to 3.9.4, package did not require any change.
+
+  [ Cédric Boutillier ]
+  * Add myself to uploaders.
+  * Depend on ruby instead of ruby1.8.
+  * Build against gemdeb >= 0.3 to provide rubygems integration.
+
+
+ -- Cédric Boutillier <boutil@debian.org>  Thu, 06 Jun 2013 23:39:11 +0200
+
+ruby-bcrypt (3.0.1-2) unstable; urgency=low
+
+  [ Vasudev Kamuth ]
+  * Team upload.
+  * debian/control:
+    + Bumped Standards-Version to 3.9.3. This did not require any changes to
+      the package source.
+    + Increased minimum debhelper version required to 9
+  * Set debian/compat to 9
+  * debian/copyright:
+    + Format URI now points to Debian copyright-format 1.0
+
+  [ Per Andersson ]
+  * Autorun rspec tests during build
+
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Sat, 16 Jun 2012 22:06:30 +0530
+
+ruby-bcrypt (3.0.1-1) unstable; urgency=low
+
+  * Team upload.
+  * Imported Upstream version 3.0.1
+
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Sun, 25 Sep 2011 23:35:32 +0530
+
+ruby-bcrypt (3.0.0-1) unstable; urgency=low
+
+  * Team upload.
+  * Imported Upstream version 3.0.0
+  * debian/copyright
+    + Changed License of gem to MIT to match upstream change
+    + Added license notice for new files ext/mri
+    + Removed license for files which were in ext/mri in the previous release
+
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Tue, 30 Aug 2011 21:05:06 +0530
+
+ruby-bcrypt (2.1.4-2) unstable; urgency=low
+
+  * Team upload.
+  * debian/ruby-tests.rb: Do not add 'ext/mri' to the $LOAD_PATH. This fixes
+    the problem of runing tests for Ruby 1.8 against the binary extension for
+    Ruby 1.9, which causes a segfault during the test phase of the build. A
+    newer gem2deb is required to run the tests, so debian/control was changed
+    accordingly to Build-Depend on gem2deb (>= 0.2.6~)
+    (Closes: #633302)
+  * Bump standards version to 3.9.2
+
+ -- Antonio Terceiro <terceiro@debian.org>  Thu, 21 Jul 2011 11:28:18 -0700
+
+ruby-bcrypt (2.1.4-1) unstable; urgency=low
+
+  * Initial release (Closes: #623597)
+
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Wed, 20 Apr 2011 22:50:12 +0530

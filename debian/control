@@ -1,0 +1,27 @@
+Source: ruby-bcrypt
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Cédric Boutillier <boutil@debian.org>
+Build-Depends: debhelper-compat (= 13),
+               gem2deb (>= 1),
+               rake,
+               ruby-rspec
+Standards-Version: 4.5.1
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-bcrypt.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-bcrypt
+Homepage: https://github.com/codahale/bcrypt-ruby
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+Rules-Requires-Root: no
+
+Package: ruby-bcrypt
+Architecture: any
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ${misc:Depends},
+         ${ruby:Depends},
+         ${shlibs:Depends}
+Description: Ruby binding for the bcrypt() password hashing algorithm
+ bcrypt() is a sophisticated and secure hash algorithm designed
+ by the OpenBSD project for hashing passwords. bcrypt-ruby provides
+ a simple, humane wrapper for safely handling passwords.
